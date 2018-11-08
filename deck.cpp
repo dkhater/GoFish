@@ -1,6 +1,6 @@
-//
-// Created by Dalia Khater on 11/5/18.
-//
+// EE312 - GoFish
+// By: Dalia Khater and Neha Shah
+
 #include "deck.h"
 
 Deck::Deck() {
@@ -8,7 +8,7 @@ Deck::Deck() {
     int i;
     int j;
     for (i = 0; i < 4; ++i){
-        for (j = 0; j < 13; ++j){
+        for (j = 1; j < 14; ++j){
             Card::Suit mySuit = (Card::Suit)i;
             myCards[i * 13 + j] = Card(j, mySuit);
         }

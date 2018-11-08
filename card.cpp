@@ -1,6 +1,5 @@
-//
-// Created by Dalia Khater on 11/5/18.
-//
+// EE312 - GoFish
+// By: Dalia Khater and Neha Shah
 
 #include "card.h"
 using namespace std;
@@ -11,7 +10,7 @@ Card::Card(int rank, Suit s){
 }
 
 Card::Card() {
-    myRank = 0;
+    myRank = 1;
     mySuit = Suit::spades;
 }
 
@@ -112,11 +111,15 @@ string Card::rankString(int r) const{
 
 
 ostream& operator << (ostream& out, const Card& c){
+    cout << c.toString();
+    return out;
 
 }
 
 
-Card::~Card(){}
+Card::~Card(){
+
+}
 
 
 

@@ -1,6 +1,5 @@
-//
-// Created by Dalia Khater on 11/5/18.
-//
+// EE312 - GoFish
+// By: Dalia Khater and Neha Shah
 
 #ifndef GOFISH_DECK_H
 #define GOFISH_DECK_H

@@ -8,102 +8,102 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/dkhater/CLionProjects/GoFish/cmake-build-debug"/>
+				<Option working_dir="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/dkhater/CLionProjects/GoFish/cmake-build-debug"/>
+				<Option working_dir="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/dkhater/CLionProjects/GoFish/cmake-build-debug"/>
+				<Option working_dir="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="GoFish">
-				<Option output="/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/GoFish" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/dkhater/CLionProjects/GoFish/cmake-build-debug"/>
+				<Option output="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/cmake-build-debug/GoFish" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 GoFish"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 GoFish"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="GoFish/fast">
-				<Option output="/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/GoFish" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/dkhater/CLionProjects/GoFish/cmake-build-debug"/>
+				<Option output="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/cmake-build-debug/GoFish" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 GoFish/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dkhater/CLionProjects/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 GoFish/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/Neha/Documents/UT/Fall\ 2018/EE\ 312/GitHub/GoFish/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/dkhater/CLionProjects/GoFish/card.cpp">
+		<Unit filename="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/card.cpp">
 			<Option target="GoFish"/>
 		</Unit>
-		<Unit filename="/Users/dkhater/CLionProjects/GoFish/card.h">
+		<Unit filename="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/card.h">
 			<Option target="GoFish"/>
 		</Unit>
-		<Unit filename="/Users/dkhater/CLionProjects/GoFish/deck.cpp">
+		<Unit filename="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/deck.cpp">
 			<Option target="GoFish"/>
 		</Unit>
-		<Unit filename="/Users/dkhater/CLionProjects/GoFish/deck.h">
+		<Unit filename="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/deck.h">
 			<Option target="GoFish"/>
 		</Unit>
-		<Unit filename="/Users/dkhater/CLionProjects/GoFish/main.cpp">
+		<Unit filename="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/main.cpp">
 			<Option target="GoFish"/>
 		</Unit>
-		<Unit filename="/Users/dkhater/CLionProjects/GoFish/player.cpp">
+		<Unit filename="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/player.cpp">
 			<Option target="GoFish"/>
 		</Unit>
-		<Unit filename="/Users/dkhater/CLionProjects/GoFish/player.h">
+		<Unit filename="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/player.h">
 			<Option target="GoFish"/>
 		</Unit>
-		<Unit filename="/Users/dkhater/CLionProjects/GoFish/CMakeLists.txt">
+		<Unit filename="/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
