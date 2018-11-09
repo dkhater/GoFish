@@ -12,33 +12,11 @@ iostream
 string
 -
 
-/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/deck.h
-card.h
-/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/card.h
-
-/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/main.cpp
-iostream
--
-cstdlib
--
-ctime
--
-vector
--
-card.h
-/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/card.h
+/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/deck.cpp
 deck.h
 /Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/deck.h
-player.h
-/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/player.h
 
-/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/player.h
-iostream
--
-string
--
-vector
--
+/Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/deck.h
 card.h
 /Users/Neha/Documents/UT/Fall 2018/EE 312/GitHub/GoFish/card.h
 

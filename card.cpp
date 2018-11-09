@@ -2,6 +2,10 @@
 // By: Dalia Khater and Neha Shah
 
 #include "card.h"
+#include <string>
+#include <iostream>
+#include <sstream>
+
 using namespace std;
 
 Card::Card(int rank, Suit s){
@@ -22,21 +26,7 @@ int Card::getRank() const {
 string Card::toString() const  {
     string str = "";
 
-    if(myRank > 1 && myRank < 11){
-        str = to_string(myRank);
-    }
-    else if (myRank == 1){
-        str = "A";
-    }
-    else if (myRank == 11){
-        str = "J";
-    }
-    else if (myRank == 12){
-        str = "Q";
-    }
-    else if (myRank == 13){
-        str = "K";
-    }
+    str = rankString(getRank());
 
     if (mySuit == Suit::spades) {
        str +=  "s";
@@ -52,6 +42,10 @@ string Card::toString() const  {
 
     else if (mySuit == Suit::clubs) {
         str +=  "c";
+    }
+    else{
+        str += "invalid suit";
+        cout << "Error in detecting suit!";
     }
 
     return str;
@@ -75,6 +69,11 @@ string Card::suitString(Card::Suit s) const{
     else if (s == Suit::clubs) {
         str =  "c";
     }
+    else{
+        str += "invalid suit";
+        cout << "Error in detecting suit!";
+    }
+
 
     return str;
 
@@ -106,7 +105,31 @@ bool Card::operator != (const Card& rhs) const{
 }
 
 string Card::rankString(int r) const{
+    string strRank = "";
 
+    ostringstream convert;
+    convert << r;
+
+    if(r > 1 && r < 11){
+        strRank = convert.str();
+    }
+    else if (r == 1){
+        strRank = "A";
+    }
+    else if (r == 11){
+        strRank = "J";
+    }
+    else if (r == 12){
+        strRank = "Q";
+    }
+    else if (r == 13){
+        strRank = "K";
+    }
+    else{
+        cout << "did not find correct rank! you have r = " << r << "!" << endl;
+        strRank = "invalid rank!";
+    }
+    return strRank;
 }
 
 

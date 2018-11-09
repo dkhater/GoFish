@@ -28,10 +28,7 @@ public:
         myName = name;
     }
 
-    string getName() const {
-        return myName;
-    }
-
+    string getName() const;
     void addCard(Card c);  //adds a card to the hand
     void bookCards(Card c1, Card c2);
 
