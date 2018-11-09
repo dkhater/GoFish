@@ -52,6 +52,7 @@ public:
     bool sameSuitAs(const Card& c) const;  // true if suit same as c
     int  getRank()                 const;  // return rank, 1..13
     string suitString(Suit s)      const;  // return "s", "h",...
+    string rankString() const;
 
 
 

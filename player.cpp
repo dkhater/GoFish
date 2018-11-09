@@ -5,19 +5,41 @@
 
 Player::Player() {
     myName = "";
-    //what else do you initialize?
+    myHand.resize(0);
+    myBook.resize(0);
 
 }
 
 void Player::addCard(Card c) {  //adds a card to the hand
     myHand.push_back(c);
 }
+
+void Player::firstBookCards(Card c1, Card c2){
+    myBook.push_back(c1);
+    myBook.push_back(c2);
+    int sizeHand = myHand.size();
+    for(int i = 0; i < sizeHand; i++){
+        if(myHand[i] == c1){
+            myHand.erase(myHand.begin() + i);
+        }
+    }
+    int sizeHand2 = myHand.size();
+    for(int j = 0; j < sizeHand2; j++){
+        if(myHand[j] == c2){
+            myHand.erase(myHand.begin() + j);
+        }
+    }
+}
+
+
 void Player::bookCards(Card c1, Card c2){
+
+    Card red1, red2;
 
     myBook.push_back(c1);
     myBook.push_back(c2);
-    removeCardFromHand(c1);
-    removeCardFromHand(c2);
+    red1 = removeCardFromHand(c1);
+    red2 = removeCardFromHand(c2);
 
 }
 
@@ -27,12 +49,32 @@ void Player::bookCards(Card c1, Card c2){
 //If a pair is found, it returns true and populates the two variables with the cards tha make the pair.
 
 bool Player::checkHandForBook(Card &c1, Card &c2){
-    if(c1.getRank() == c2.getRank()){
-        return true;
-    }
-    else
-        return false;
 
+    int sizeHand= myHand.size();
+    for(int i = 0; i < sizeHand -1; i++){
+        for(int j = i+1; j < sizeHand; j++){
+            if(myHand[i].getRank() == myHand[j].getRank()){
+                c1 = myHand[i];
+                c2 = myHand[j];
+                return true;
+            }
+        }
+    }
+    return false;
+/*
+    vector<Card>::const_iterator iter1;
+    vector<Card>::const_iterator iter2;
+
+    for (iter1 = myHand.begin(); iter1 != (myHand.end()-1); iter1++){
+        for(iter2 = iter1 + 1; iter1 != myHand.end(); iter2++)
+            if(iter1->getRank() == iter2->getRank()){
+                c1 = *iter1;
+                c2 = *iter2;
+                return true;
+            }
+    }
+    return false;
+*/
 }
 
 //OPTIONAL
@@ -52,7 +94,6 @@ bool Player::rankInHand(Card c) const{
 //uses some strategy to choose one card from the player's
 //hand so they can say "Do you have a 4?"
 Card Player::chooseCardFromHand() const{
-    //how do you access the first card in the hand? then get rank and just ask
     Card toAsk;
     srand((unsigned)time(0));
     int index;
@@ -77,12 +118,14 @@ bool Player::cardInHand(Card c) const{
 
 //Remove the card c from the hand and return it to the caller
 Card Player::removeCardFromHand(Card c){
+    Card removal;
     int index = 0;
     int sizeHand = myHand.size();
     for(index = 0; index < sizeHand; index++){
-        if(myHand[index] == c){
+        if(myHand[index].getRank() == c.getRank()){
+            removal = myHand[index];
             myHand.erase(myHand.begin() + index);
-            return c;
+            return removal;
         }
     }
 
@@ -93,14 +136,13 @@ Card Player::removeCardFromHand(Card c){
     }
      */
 
-
 }
 
 string Player::showHand() const{
     string handStr = "";
     int sizeHand = myHand.size();
     for(int i = 0; i < sizeHand; i++){
-        handStr = handStr.append(myHand[i].toString());
+        handStr = handStr.append(myHand[i].toString()) + " ";
     }
     return handStr;
 
@@ -110,7 +152,7 @@ string Player::showBooks() const{
     string bookStr = "";
     int bookHand = myBook.size();
     for(int i = 0; i < bookHand; i++){
-        bookStr = bookStr.append(myBook[i].toString());
+        bookStr = bookStr.append(myBook[i].toString()) + " ";
     }
     return bookStr;
 

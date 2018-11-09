@@ -31,6 +31,7 @@ public:
     string getName() const;
     void addCard(Card c);  //adds a card to the hand
     void bookCards(Card c1, Card c2);
+    void firstBookCards(Card c1, Card c2);
 
     //OPTIONAL
     // comment out if you decide to not use it

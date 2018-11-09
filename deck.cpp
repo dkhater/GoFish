@@ -5,12 +5,14 @@
 
 Deck::Deck() {
     myIndex = 0;
+    int counter = 0;
     int i;
     int j;
     for (i = 0; i < 4; ++i){
+        Card::Suit mySuit = (Card::Suit)i;
         for (j = 1; j < 14; ++j){
-            Card::Suit mySuit = (Card::Suit)i;
-            myCards[i * 13 + j] = Card(j, mySuit);
+            myCards[counter] = Card(j, mySuit);
+            counter++;
         }
     }
 
@@ -21,22 +23,15 @@ Deck::~Deck(){}
 
 Card Deck::dealCard() {
     Card toReturn;
-    if(myIndex < SIZE){
+    if (myIndex < SIZE) {
         toReturn = myCards[myIndex];
         myIndex++;
         return toReturn;
     }
     else
         cout << "Deck is empty!" << endl;
-        ;//return (Card)0;      //What do you return if you can't deal??
+    //return (Card)0;      //What do you return if you can't deal??
 
-
-    /*
-    if (myIndex>-1) {
-        myIndex -= 1;
-        return myCards[52 - myIndex - 1];
-    }
-     */
 }
 
 void Deck::shuffle() {
@@ -44,8 +39,8 @@ void Deck::shuffle() {
     int shuffleTimes = 2 * size();
     while (shuffleTimes != 0) {
 
-        card1position = ((rand() % size()) +1);
-        card2position = ((rand() % size()) +1);
+        card1position = ((rand() % size()));
+        card2position = ((rand() % size()));
 
         Card temp = myCards[card1position];
         myCards[card1position] = myCards[card2position];
@@ -56,6 +51,6 @@ void Deck::shuffle() {
 }
 
 int Deck::size() const {
-    return (SIZE - myIndex) + 1;
+    return (SIZE - myIndex);
 }
 

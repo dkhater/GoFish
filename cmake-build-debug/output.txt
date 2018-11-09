@@ -1,0 +1,140 @@
+Welcome to Go Fish!
+
+Joey has initial hand: Kc Kh 5h 6h 7s 7c 8h 
+Nancy has initial hand: 4s 6c 10c 5s 4h Qs 3c 
+
+Joey has initial Books: Kc Kh 7s 7c 
+Nancy has initial Books: 4s 4h 
+
+
+Joey asks - Do you have a 6?
+Nancy says - Yes. I have a 6.
+
+Joey has : 5h 6h 8h 6c 
+Nancy has : 10c 5s Qs 3c 
+Joey has : 5h 8h 
+Nancy has : 10c 5s Qs 3c 
+
+Joey asks - Do you have a 5?
+Nancy says - Yes. I have a 5.
+
+Joey has : 5h 8h 5s 
+Nancy has : 10c Qs 3c 
+Joey has : 8h 
+Nancy has : 10c Qs 3c 
+
+Joey asks - Do you have a 8?
+Nancy says - Go Fish!
+
+Joey draws 2s
+Nancy asks - Do you have a Q?
+Joey says - Go Fish!
+
+Nancy draws 9c
+
+Nancy has : 10c Qs 3c 3d 
+Joey has : 8h 5d 
+
+Nancy has : 10c Qs 
+Joey has : 8h 5d 
+Nancy asks - Do you have a 10?
+Joey says - Go Fish!
+
+Nancy draws 2c
+
+Nancy has : 10c Qs 10s 
+Joey has : 8h 5d 
+
+Nancy has : Qs 
+Joey has : 8h 5d 
+Joey asks - Do you have a 8?
+Nancy says - Go Fish!
+
+Joey draws 6d
+Joey asks - Do you have a 5?
+Nancy says - Go Fish!
+
+Joey draws Ac
+
+Joey has : 8h 5d 9d 9h 
+Nancy has : Qs 
+
+Joey has : 8h 5d 
+Nancy has : Qs 
+Nancy asks - Do you have a Q?
+Joey says - Go Fish!
+
+Nancy draws 4d
+Nancy asks - Do you have a Q?
+Joey says - Go Fish!
+
+Nancy draws 4c
+Joey asks - Do you have a 8?
+Nancy says - Go Fish!
+
+Joey draws 9s
+Joey asks - Do you have a 5?
+Nancy says - Yes. I have a 5.
+
+Joey has : 8h 5d 10h 5c 
+Nancy has : Qs Jd 
+Joey has : 8h 10h 
+Nancy has : Qs Jd 
+
+Joey asks - Do you have a 8?
+Nancy says - Go Fish!
+
+Joey draws Ks
+Nancy asks - Do you have a Q?
+Joey says - Go Fish!
+
+Nancy draws Qc
+Nancy asks - Do you have a J?
+Joey says - Go Fish!
+
+Nancy draws 8s
+
+Nancy has : Qs Jd 7d Js 
+Joey has : 8h 10h 3h 
+
+Nancy has : Qs 7d 
+Joey has : 8h 10h 3h 
+Joey asks - Do you have a 10?
+Nancy says - Go Fish!
+
+Joey draws Ad
+
+Joey has : 8h 10h 3h 3s 
+Nancy has : Qs 7d 
+
+Joey has : 8h 10h 
+Nancy has : Qs 7d 
+Joey asks - Do you have a 8?
+Nancy says - Go Fish!
+
+Joey draws Qh
+Nancy asks - Do you have a Q?
+Joey says - Go Fish!
+
+Nancy draws 10d
+Nancy asks - Do you have a 7?
+Joey says - Go Fish!
+
+Nancy draws Ah
+Joey asks - Do you have a 10?
+Nancy says - Go Fish!
+
+Joey draws 8c
+
+Joey has : 8h 10h As 8d 
+Nancy has : Qs 7d Kd 2d 
+
+Joey has : 10h As 
+Nancy has : Qs 7d Kd 2d 
+Joey asks - Do you have a 10?
+Nancy says - Go Fish!
+
+Joey draws 2h
+Nancy asks - Do you have a Q?
+Joey says - Yes. I have a Q.
+

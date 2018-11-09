@@ -45,11 +45,18 @@ string Card::toString() const  {
     }
     else{
         str += "invalid suit";
-        cout << "Error in detecting suit!";
+        cout << "Error in detecting suit! suit is: ";
+        cout << mySuit << endl;
     }
 
     return str;
 
+}
+
+string Card::rankString() const {
+    string str = "";
+    str = rankString(getRank());
+    return str;
 }
 
 string Card::suitString(Card::Suit s) const{

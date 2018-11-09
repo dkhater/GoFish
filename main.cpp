@@ -2,6 +2,7 @@
 #include <iostream>    // Provides cout and cin
 #include <cstdlib>     // Provides EXIT_SUCCESS
 #include <ctime>
+#include <fstream>
 #include <vector>
 #include "card.h"
 #include "deck.h"
@@ -16,76 +17,154 @@ void dealHand(Deck &d, Player &p, int numCards)
         p.addCard(d.dealCard());
 }
 
+int main() {
 
-int main( )
-{
-    int numCards = 5;
+    ofstream myfile;
+    //myfile.open(argv[1]);
+    myfile.open("output.txt");
 
-    Player p1("Joe");
-    Player p2("Jane");
-
-    Deck d;  //create a deck of cards
-    d.shuffle();
-
-    dealHand(d, p1, numCards);
-    dealHand(d, p2, numCards);
-
-    cout << p1.getName() <<" has : " << p1.showHand() << endl;
-    cout << p2.getName() <<" has : " << p2.showHand() << endl;
-
-    return EXIT_SUCCESS;
-}
+    if (myfile.is_open()) {
+        cout << "File is Opened!\n";
 
 
-/*
-int main( )
-{
-    cout << "Welcome to Go Fish!\n\n" << endl;
+        myfile << "Welcome to Go Fish!\n\n";
 
-    Deck d;
-    //d.shuffle();
+        int numCards = 7;
 
-    Card c = d.dealCard();
-    cout << "deal test " << c << endl;
-    cout << endl;
+        Player p1("Joey");
+        Player p2("Nancy");
 
-    Player p("Joe");
-    cout << p.getName() << endl;
-    p.addCard(c);
-    p.addCard(d.dealCard());
-    cout << p.showHand() << endl;
+        Deck d;  //create a deck of cards
+        d.shuffle();
+
+        dealHand(d, p1, numCards);
+        dealHand(d, p2, numCards);
+
+        myfile << p1.getName() << " has initial hand: " << p1.showHand() << "\n";
+        myfile << p2.getName() << " has initial hand: " << p2.showHand() << "\n";
+
+        Card card1toBook, card2toBook;
+        if (p1.checkHandForBook(card1toBook, card2toBook)) {
+            p1.firstBookCards(card1toBook, card2toBook);
+        }
+        if (p1.checkHandForBook(card1toBook, card2toBook)) {
+            p1.firstBookCards(card1toBook, card2toBook);
+        }
+        if (p1.checkHandForBook(card1toBook, card2toBook)) {
+            p1.firstBookCards(card1toBook, card2toBook);
+        }
+        if (p2.checkHandForBook(card1toBook, card2toBook)) {
+            p2.firstBookCards(card1toBook, card2toBook);
+        }
+        if (p2.checkHandForBook(card1toBook, card2toBook)) {
+            p2.firstBookCards(card1toBook, card2toBook);
+        }
+        if (p2.checkHandForBook(card1toBook, card2toBook)) {
+            p2.firstBookCards(card1toBook, card2toBook);
+        }
+
+        myfile << "\n";
+        myfile << p1.getName() << " has initial Books: " << p1.showBooks() << "\n";
+        myfile << p2.getName() << " has initial Books: " << p2.showBooks() << "\n" << "\n" << "\n";
 
 
-    int numCards = 5;
+        Player &current = p1;
+        Player &opposite = p2;
 
-    vector <Card> cards(numCards);
+        string response;
+        bool answer;
+        bool turn = true;
 
-    srand((unsigned)time(0));  //seed the random number generator
+        while ((current.getBookSize() + opposite.getBookSize()) < 52) {
+            //myfile << "Deck size is:" << d.size() << "\n";
 
-    for (int i = 0; i < numCards; i++) {
-        int rank = (rand() % 13) + 1;
-        int suit = (rand() % 4) + 1;
-        Card c(rank,(Card::Suit)suit);
-        cout << "rank - " << rank << "  "  << c <<  endl;
-        cards[i] = c;
+            if (turn) {
+                current = current;
+                opposite = opposite;
+            } else {
+                Player temp;
+                temp = current;
+                current = opposite;
+                opposite = temp;
+            }
+
+
+            if (current.getHandSize() < 1) {
+                current.addCard(d.dealCard());
+            }
+
+            Card cardAsk = current.chooseCardFromHand();
+            myfile << current.getName() << " asks - Do you have a " << cardAsk.rankString() << "?" << "\n";
+
+            answer = opposite.rankInHand(cardAsk);
+            if (answer) {
+                myfile << opposite.getName() << " says - Yes. I have a " << cardAsk.rankString() << "." << "\n";
+                Card cardTake = opposite.removeCardFromHand(cardAsk);
+                current.addCard(cardTake);
+
+                myfile << endl;
+                myfile << current.getName() << " has : " << current.showHand() << "\n";
+                myfile << opposite.getName() << " has : " << opposite.showHand() << "\n";
+
+                if (current.checkHandForBook(card1toBook, card2toBook)) {
+                    current.bookCards(cardAsk, cardTake);
+                    //myfile << current.getName() << " books " << card1toBook.toString() << " and "
+                         //<< card2toBook.toString() << "\n";
+                }
+
+                myfile << current.getName() << " has : " << current.showHand() << "\n";
+                myfile << opposite.getName() << " has : " << opposite.showHand() << "\n";
+                myfile << "\n";
+               // myfile << current.getName() << " has Books: " << current.showBooks() << "\n";
+              //  myfile << opposite.getName() << " has Books: " << opposite.showBooks() << "\n";
+
+
+            } else {
+                response = "Go Fish!\n";
+                myfile << opposite.getName() << " says - " << response << "\n";
+                turn = !turn;
+                Card drawCard = d.dealCard();
+                myfile << current.getName() << " draws " << drawCard.toString() << "\n";
+                current.addCard(d.dealCard());
+
+                if (current.checkHandForBook(card1toBook, card2toBook)) {
+                    myfile << "\n";
+                    myfile << current.getName() << " has : " << current.showHand() << "\n";
+                    myfile << opposite.getName() << " has : " << opposite.showHand() << "\n";
+                    current.bookCards(card1toBook, card2toBook);
+                    //myfile << current.getName() << " books " << card1toBook.toString() << " and "
+                         //<< card2toBook.toString() << "\n";
+                    myfile << "\n";
+                    myfile << current.getName() << " has : " << current.showHand() << "\n";
+                    myfile << opposite.getName() << " has : " << opposite.showHand() << "\n";
+                }
+            }
+        }
+
+        myfile << "\n";
+        myfile << current.getName() << " has Final Books: " << current.showBooks() << "\n";
+        myfile << opposite.getName() << " has Final Books: " << opposite.showBooks() << "\n";
+
+        if (current.getBookSize() > opposite.getBookSize()) {
+            myfile << current.getName() << " won!" << "\n";
+        } else if (current.getBookSize() < opposite.getBookSize())
+            myfile << opposite.getName() << " won!" << "\n";
+        else
+            myfile << "It is a tie!" << "\n";
+
+        myfile.close();
+        return EXIT_SUCCESS;
     }
 
-    for (int i = 0; i < cards.size(); i++)
-        cout << cards[i] << endl;
+    else {
+        cout << "Unable to Open File";
+    }
 
-    cards.erase(cards.begin()+2);
-
-    cout << "after" << endl;
-
-    for (int i = 0; i < cards.size(); i++)
-        cout << cards[i] << endl;
-
-    return EXIT_SUCCESS;
-
+    return 0;
 
 }
 
-*/
+
 
 
    
