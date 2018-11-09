@@ -28,8 +28,11 @@ Card Deck::dealCard() {
         myIndex++;
         return toReturn;
     }
-    else
+    else{
         cout << "Deck is empty!" << endl;
+        myIndex = -1;
+    }
+
     //return (Card)0;      //What do you return if you can't deal??
 
 }

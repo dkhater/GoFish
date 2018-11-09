@@ -28,6 +28,7 @@ int main() {
 
 
         myfile << "Welcome to Go Fish!\n\n";
+        cout << "Welcome to Go Fish!\n\n";
 
         int numCards = 7;
 
@@ -42,6 +43,8 @@ int main() {
 
         myfile << p1.getName() << " has initial hand: " << p1.showHand() << "\n";
         myfile << p2.getName() << " has initial hand: " << p2.showHand() << "\n";
+        cout << p1.getName() << " has initial hand: " << p1.showHand() << "\n";
+        cout << p2.getName() << " has initial hand: " << p2.showHand() << "\n";
 
         Card card1toBook, card2toBook;
         if (p1.checkHandForBook(card1toBook, card2toBook)) {
@@ -66,6 +69,8 @@ int main() {
         myfile << "\n";
         myfile << p1.getName() << " has initial Books: " << p1.showBooks() << "\n";
         myfile << p2.getName() << " has initial Books: " << p2.showBooks() << "\n" << "\n" << "\n";
+        cout << p1.getName() << " has initial Books: " << p1.showBooks() << "\n";
+        cout << p2.getName() << " has initial Books: " << p2.showBooks() << "\n" << "\n" << "\n";
 
 
         Player &current = p1;
@@ -78,7 +83,7 @@ int main() {
         while ((current.getBookSize() + opposite.getBookSize()) < 52) {
             //myfile << "Deck size is:" << d.size() << "\n";
 
-            if (turn) {
+           /* if (turn) {
                 current = current;
                 opposite = opposite;
             } else {
@@ -87,70 +92,104 @@ int main() {
                 current = opposite;
                 opposite = temp;
             }
+*/           cout << "d.size is " << d.size() << "\n";
 
-
-            if (current.getHandSize() < 1) {
+            if ((current.getHandSize() < 1) && d.size() > 0) {
                 current.addCard(d.dealCard());
+                Player temp;
+                temp = current;
+                current = opposite;
+                opposite = temp;
             }
+            else {
 
-            Card cardAsk = current.chooseCardFromHand();
-            myfile << current.getName() << " asks - Do you have a " << cardAsk.rankString() << "?" << "\n";
+                Card cardAsk = current.chooseCardFromHand();
+                myfile << current.getName() << " asks - Do you have a " << cardAsk.rankString() << "?" << "\n";
+                // cout << current.getName() << " asks - Do you have a " << cardAsk.rankString() << "?" << "\n";
 
-            answer = opposite.rankInHand(cardAsk);
-            if (answer) {
-                myfile << opposite.getName() << " says - Yes. I have a " << cardAsk.rankString() << "." << "\n";
-                Card cardTake = opposite.removeCardFromHand(cardAsk);
-                current.addCard(cardTake);
-
-                myfile << endl;
-                myfile << current.getName() << " has : " << current.showHand() << "\n";
-                myfile << opposite.getName() << " has : " << opposite.showHand() << "\n";
-
-                if (current.checkHandForBook(card1toBook, card2toBook)) {
-                    current.bookCards(cardAsk, cardTake);
-                    //myfile << current.getName() << " books " << card1toBook.toString() << " and "
-                         //<< card2toBook.toString() << "\n";
-                }
-
-                myfile << current.getName() << " has : " << current.showHand() << "\n";
-                myfile << opposite.getName() << " has : " << opposite.showHand() << "\n";
-                myfile << "\n";
-               // myfile << current.getName() << " has Books: " << current.showBooks() << "\n";
-              //  myfile << opposite.getName() << " has Books: " << opposite.showBooks() << "\n";
+                answer = opposite.rankInHand(cardAsk);
+                if (answer) {
+                    myfile << opposite.getName() << " says - Yes. I have a " << cardAsk.rankString() << "." << "\n";
+                    cout << opposite.getName() << " says - Yes. I have a " << cardAsk.rankString() << "." << "\n";
+                    Card cardTake = opposite.removeCardFromHand(cardAsk);
+                    current.addCard(cardTake);
 
 
-            } else {
-                response = "Go Fish!\n";
-                myfile << opposite.getName() << " says - " << response << "\n";
-                turn = !turn;
-                Card drawCard = d.dealCard();
-                myfile << current.getName() << " draws " << drawCard.toString() << "\n";
-                current.addCard(d.dealCard());
-
-                if (current.checkHandForBook(card1toBook, card2toBook)) {
-                    myfile << "\n";
                     myfile << current.getName() << " has : " << current.showHand() << "\n";
                     myfile << opposite.getName() << " has : " << opposite.showHand() << "\n";
-                    current.bookCards(card1toBook, card2toBook);
-                    //myfile << current.getName() << " books " << card1toBook.toString() << " and "
-                         //<< card2toBook.toString() << "\n";
-                    myfile << "\n";
-                    myfile << current.getName() << " has : " << current.showHand() << "\n";
-                    myfile << opposite.getName() << " has : " << opposite.showHand() << "\n";
+                    cout << current.getName() << " has : " << current.showHand() << "\n";
+                    cout << opposite.getName() << " has : " << opposite.showHand() << "\n";
+
+                    if (current.checkHandForBook(card1toBook, card2toBook)) {
+                        current.bookCards(cardAsk, cardTake);
+                        myfile << current.getName() << " books " << card1toBook.toString() << " and "
+                               << card2toBook.toString() << "\n";
+                    }
+
+
+                    //myfile << current.getName() << " has : " << current.showHand() << "\n";
+                    //myfile << opposite.getName() << " has : " << opposite.showHand() << "\n";
+
+                    // myfile << current.getName() << " has Books: " << current.showBooks() << "\n";
+                    // myfile << opposite.getName() << " has Books: " << opposite.showBooks() << "\n";
+
+                    cout << current.getName() << " has : " << current.showHand() << "\n";
+                    cout << opposite.getName() << " has : " << opposite.showHand() << "\n";
+
+                    cout << current.getName() << " has Books: " << current.showBooks() << "\n";
+                    cout << opposite.getName() << " has Books: " << opposite.showBooks() << "\n";
+
+
+
+                } else{
+                    response = "Go Fish!\n";
+                    myfile << opposite.getName() << " says - " << response << "\n";
+                    Card drawCard = d.dealCard();
+                    myfile << current.getName() << " draws " << drawCard.toString() << "\n";
+                    current.addCard(d.dealCard());
+
+                    if (current.checkHandForBook(card1toBook, card2toBook)) {
+
+                        myfile << current.getName() << " has : " << current.showHand() << "\n";
+                        myfile << opposite.getName() << " has : " << opposite.showHand() << "\n";
+                        current.bookCards(card1toBook, card2toBook);
+                        myfile << current.getName() << " books " << card1toBook.toString() << " and "
+                               << card2toBook.toString() << "\n";
+
+                        myfile << current.getName() << " has : " << current.showHand() << "\n";
+                        myfile << opposite.getName() << " has : " << opposite.showHand() << "\n";
+                    }
+                    //Swap turns
+                    Player temp;
+                    temp = current;
+                    current = opposite;
+                    opposite = temp;
+
                 }
             }
         }
 
-        myfile << "\n";
+
         myfile << current.getName() << " has Final Books: " << current.showBooks() << "\n";
         myfile << opposite.getName() << " has Final Books: " << opposite.showBooks() << "\n";
 
+        cout << "\n";
+        cout << current.getName() << " has Final Books: " << current.showBooks() << "\n";
+        cout << opposite.getName() << " has Final Books: " << opposite.showBooks() << "\n";
+
+
         if (current.getBookSize() > opposite.getBookSize()) {
             myfile << current.getName() << " won!" << "\n";
-        } else if (current.getBookSize() < opposite.getBookSize())
+            cout << current.getName() << " won!" << "\n";
+        } else if (current.getBookSize() < opposite.getBookSize()) {
             myfile << opposite.getName() << " won!" << "\n";
-        else
+            cout << opposite.getName() << " won!" << "\n";
+        }
+        else{
             myfile << "It is a tie!" << "\n";
+            cout << "It is a tie!" << "\n";
+        }
+
 
         myfile.close();
         return EXIT_SUCCESS;
@@ -158,8 +197,10 @@ int main() {
 
     else {
         cout << "Unable to Open File";
+        myfile.close();
     }
 
+    myfile.close();
     return 0;
 
 }
