@@ -20,15 +20,14 @@ void dealHand(Deck &d, Player &p, int numCards)
 int main() {
 
     ofstream myfile;
-    //myfile.open(argv[1]);
     myfile.open("output.txt");
 
     if (myfile.is_open()) {
         cout << "File is Opened!\n";
 
-
         myfile << "Welcome to Go Fish!\n\n";
         cout << "Welcome to Go Fish!\n\n";
+
 
         int numCards = 7;
 
@@ -38,8 +37,10 @@ int main() {
         Deck d;  //create a deck of cards
         d.shuffle();
 
+        cout << "d.size before dealing is " << d.size() << "\n";
         dealHand(d, p1, numCards);
         dealHand(d, p2, numCards);
+        cout << "d.size after dealing is " << d.size() << "\n";
 
         myfile << p1.getName() << " has initial hand: " << p1.showHand() << "\n";
         myfile << p2.getName() << " has initial hand: " << p2.showHand() << "\n";
@@ -144,9 +145,11 @@ int main() {
                 } else{
                     response = "Go Fish!\n";
                     myfile << opposite.getName() << " says - " << response << "\n";
+                    cout << "d.size before draw is " << d.size() << "\n";
                     Card drawCard = d.dealCard();
+                    cout << "d.size after draw is " << d.size() << "\n";
                     myfile << current.getName() << " draws " << drawCard.toString() << "\n";
-                    current.addCard(d.dealCard());
+                    current.addCard(drawCard);
 
                     if (current.checkHandForBook(card1toBook, card2toBook)) {
 
